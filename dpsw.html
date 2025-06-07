@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RR Store - বাংলাদেশের সেরা ডিজিটাল পণ্যের মার্কেটপ্লেস। ই-বুক, এআই রিল বান্ডিল, পিসি সফটওয়্যার এবং অ্যান্ড্রয়েড অ্যাপস কিনুন।">
+    <meta name="keywords" content="RR Store, ডিজিটাল পণ্য, ই-বুক, সফটওয়্যার, বাংলাদেশ, বিকাশ, নগদ, রকেট">
+    <title>RR Store - বাংলাদেশের সেরা ডিজিটাল পণ্যের মার্কেটপ্লেস</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_GOOGLE_ADSENSE_ID" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
+        :root {
+            --primary: #4e54c8;
+            --secondary: #8f94fb;
+            --accent: #ff6b6b;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --success: #28a745;
+            --warning: #ffc107;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f4 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .search-box {
+            display: flex;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            padding: 5px 15px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            padding: 8px;
+            width: 200px;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        .cart-btn, .user-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .cart-btn:hover, .user-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(78, 84, 200, 0.8), rgba(78, 84, 200, 0.8)), url('https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3') center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+
+        /* Categories Section */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            font-size: 2.2rem;
+            color: var(--dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .category-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Products Section */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .product-img {
+            height: 200px;
+            width: 100%;
+            background: linear-gradient(45deg, #8f94fb, #4e54c8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .product-desc {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .product-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .add-to-cart {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .add-to-cart:hover {
+            background: var(--secondary);
+        }
+
+        .view-details {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .view-details:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Ad Sections */
+        .ad-section {
+            margin: 50px 0;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .ad-placeholder {
+            height: 250px;
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 1.2rem;
+            border: 2px dashed #dee2e6;
+        }
+
+        /* Payment Methods */
+        .payment-methods {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 50px 0;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--dark);
+            font-size: 1.8rem;
+        }
+
+        .payment-options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .payment-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .payment-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        .payment-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Security Section */
+        .security {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 0;
+            margin: 50px 0 0;
+            text-align: center;
+        }
+
+        .security-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .security h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .security-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .security-feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .security-feature i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-column p {
+            color: #aaa;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .search-box input {
+                width: 150px;
+            }
+            
+            .product-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .add-to-cart, .view-details {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj48cGF0aCBmaWxsPSIjNGU1NGM4IiBkPSJNMTI1IDMwTDE4Ny4xNDYgNjUuODU0TDIzNSA0OC45MDdMMTI1IDBMMTUgNDguOTA3bDQ3Ljg1NCAxNi45NDdMMTI1IDMweiIvPjxwYXRoIGZpbGw9IiM4Zjk0ZmIiIGQ9Ik02NS44NTQgNjUuODU0TDEyNSAzMGw1OS4xNDYgMzUuODU0TDEyNSAxMDBMNjUuODU0IDY1Ljg1NHoiLz48cGF0aCBmaWxsPSIjNGU1NGM4IiBkPSJNMTUgNDguOTA3djE1Mi4xODZMMTI1IDI1MGwxMTAtNDguOTA3VjQ4LjkwN0wxMjUgMTAwTDE1IDQ4LjkwN3oiLz48cGF0aCBmaWxsPSIjOGY5NGZiIiBkPSJNMTI1IDEwMFYyNTBMMjM1IDIwMS4wOTNWNDguOTA3TDEyNSAxMDB6Ii8+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTEyNSAxNTIuNjY3bC00MC4xNDYtMjMuMjg0TDEyNSAxMDBsNDAuMTQ2IDI5LjM4M0wxMjUgMTUyLjY2N3oiLz48L3N2Zz4=" alt="RR Store Logo">
+                <h1>RR Store</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> হোম</a></li>
+                    <li><a href="#products"><i class="fas fa-box-open"></i> পণ্য</a></li>
+                    <li><a href="#categories"><i class="fas fa-list"></i> ক্যাটাগরি</a></li>
+                    <li><a href="#offers"><i class="fas fa-percent"></i> অফার</a></li>
+                    <li><a href="#contact"><i class="fas fa-phone"></i> যোগাযোগ</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="পণ্য খুঁজুন...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div style="position: relative;">
+                    <button class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </button>
+                </div>
+                <button class="user-btn">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>ডিজিটাল পণ্যের সেরা সংগ্রহ</h2>
+            <p>ই-বুক, এআই রিল বান্ডিল, পিসি সফটওয়্যার এবং অ্যান্ড্রয়েড অ্যাপস - সবকিছু এক জায়গায়</p>
+            <a href="#products" class="btn">পণ্য ব্রাউজ করুন <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Ad Section 1 -->
+    <div class="container">
+        <div class="ad-section">
+            <h3>বিজ্ঞাপনের স্থান</h3>
+            <div class="ad-placeholder">
+                Google AdSense / Adsterra Ad Unit
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <section id="categories" class="container">
+        <h2 class="section-title">আমাদের ক্যাটাগরিসমূহ</h2>
+        <div class="categories">
+            <div class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>ই-বুক</h3>
+                <p>বিভিন্ন বিষয়ের উপর হাজার হাজার ই-বুক</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3>এআই রিল বান্ডিল</h3>
+                <p>সামাজিক মিডিয়ার জন্য প্রিমিয়াম রিল টেমপ্লেট</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3>পিসি সফটওয়্যার</h3>
+                <p>উৎপাদনশীলতা, গ্রাফিক্স এবং গেমিং সফটওয়্যার</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>অ্যান্ড্রয়েড অ্যাপস</h3>
+                <p>প্রিমিয়াম অ্যাপ্লিকেশন সস্তা দামে</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="container">
+        <h2 class="section-title">জনপ্রিয় পণ্য</h2>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-badge">বেস্টসেলার</div>
+                <div class="product-img">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">ডিজিটাল মার্কেটিং মাস্টারি</h3>
+                    <p class="product-desc">এই ইবুকটি আপনাকে ডিজিটাল মার্কেটিংয়ের সকল কৌশল শেখাবে</p>
+                    <div class="product-price">৳ ৩৯৯</div>
+                    <div class="product-actions">
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> কার্টে যোগ</button>
+                        <button class="view-details">বিস্তারিত</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-badge">নতুন</div>
+                <div class="product-img">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">প্রিমিয়াম এআই রিল প্যাক</h3>
+                    <p class="product-desc">৫০০+ এআই জেনারেটেড রিল টেমপ্লেট ফেসবুক ও ইনস্টাগ্রামের জন্য</p>
+                    <div class="product-price">৳ ১২৯৯</div>
+                    <div class="product-actions">
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> কার্টে যোগ</button>
+                        <button class="view-details">বিস্তারিত</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">ফটোশপ প্রো ২০২৪</h3>
+                    <p class="product-desc">ফুল ভার্সন ফটোশপ সফটওয়্যার লাইফটাইম আপডেট সহ</p>
+                    <div class="product-price">৳ ২৯৯৯</div>
+                    <div class="product-actions">
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> কার্টে যোগ</button>
+                        <button class="view-details">বিস্তারিত</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-badge">অফার</div>
+                <div class="product-img">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">ভিডিও এডিটিং প্রো অ্যাপ</h3>
+                    <p class="product-desc">সর্বাধিক বিক্রিত ভিডিও এডিটিং অ্যাপ প্রিমিয়াম ভার্সন</p>
+                    <div class="product-price">৳ ৫৯৯</div>
+                    <div class="product-actions">
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> কার্টে যোগ</button>
+                        <button class="view-details">বিস্তারিত</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Section 2 -->
+    <div class="container">
+        <div class="ad-section">
+            <h3>বিজ্ঞাপনের স্থান</h3>
+            <div class="ad-placeholder">
+                Google AdSense / Adsterra Ad Unit
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Methods -->
+    <section class="container">
+        <div class="payment-methods">
+            <h2 class="payment-title">আমাদের পেমেন্ট পদ্ধতিসমূহ</h2>
+            <div class="payment-options">
+                <div class="payment-option">
+                    <div class="payment-icon" style="color: #e2136e;">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <span class="payment-name">বিকাশ</span>
+                </div>
+                <div class="payment-option">
+                    <div class="payment-icon" style="color: #e82e2f;">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <span class="payment-name">নগদ</span>
+                </div>
+                <div class="payment-option">
+                    <div class="payment-icon" style="color: #7d3f98;">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <span class="payment-name">রকেট</span>
+                </div>
+                <div class="payment-option">
+                    <div class="payment-icon" style="color: #0070ba;">
+                        <i class="fab fa-cc-visa"></i>
+                    </div>
+                    <span class="payment-name">ক্রেডিট কার্ড</span>
+                </div>
+                <div class="payment-option">
+                    <div class="payment-icon" style="color: #28a745;">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <span class="payment-name">ব্যাংক ট্রান্সফার</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security">
+        <div class="container security-content">
+            <h2>আপনার নিরাপত্তা আমাদের অগ্রাধিকার</h2>
+            <p>আমরা সর্বোচ্চ নিরাপত্তা মান নিশ্চিত করি যাতে আপনার তথ্য এবং লেনদেন সম্পূর্ণ সুরক্ষিত থাকে</p>
+            
+            <div class="security-features">
+                <div class="security-feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>এসএসএল এনক্রিপশন</h3>
+                    <p>সমস্ত ডেটা এন্ড-টু-এন্ড এনক্রিপ্টেড</p>
+                </div>
+                <div class="security-feature">
+                    <i class="fas fa-lock"></i>
+                    <h3>সুরক্ষিত পেমেন্ট</h3>
+                    <p>সব লেনদেন নিরাপদ পেমেন্ট গেটওয়ে মাধ্যমে</p>
+                </div>
+                <div class="security-feature">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>প্রাইভেসি সুরক্ষা</h3>
+                    <p>আপনার তথ্য কখনো তৃতীয় পক্ষের সাথে শেয়ার করা হয় না</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RR Store</h3>
+                    <p>বাংলাদেশের সেরা ডিজিটাল পণ্যের অনলাইন মার্কেটপ্লেস। আমরা বিশ্বস্ততার সাথে সেবা প্রদান করে থাকি।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>দ্রুত লিংক</h3>
+                    <ul>
+                        <li><a href="#">হোম</a></li>
+                        <li><a href="#products">পণ্য</a></li>
+                        <li><a href="#categories">ক্যাটাগরি</a></li>
+                        <li><a href="#offers">বিশেষ অফার</a></li>
+                        <li><a href="#">আমাদের সম্পর্কে</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>কাস্টমার কেয়ার</h3>
+                    <ul>
+                        <li><a href="#">আমার অ্যাকাউন্ট</a></li>
+                        <li><a href="#">অর্ডার ট্র্যাক করুন</a></li>
+                        <li><a href="#">রিটার্ন পলিসি</a></li>
+                        <li><a href="#">প্রাইভেসি পলিসি</a></li>
+                        <li><a href="#">শর্তাবলী</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>যোগাযোগ</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> গ্রীন রোড, ঢাকা, বাংলাদেশ</p>
+                    <p><i class="fas fa-phone"></i> +৮৮০ ১৭XX-XXXXXX</p>
+                    <p><i class="fas fa-envelope"></i> support@rrstore.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; ২০২৩ RR Store. সকল অধিকার সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Shopping cart functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const cartCount = document.querySelector('.cart-count');
+            let count = 0;
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    count++;
+                    cartCount.textContent = count;
+                    
+                    // Animation effect
+                    this.innerHTML = '<i class="fas fa-check"></i> যোগ করা হয়েছে';
+                    this.style.background = 'var(--success)';
+                    
+                    setTimeout(() => {
+                        this.innerHTML = '<i class="fas fa-cart-plus"></i> কার্টে যোগ';
+                        this.style.background = '';
+                    }, 2000);
+                });
+            });
+            
+            // Search functionality
+            const searchBox = document.querySelector('.search-box input');
+            const searchButton = document.querySelector('.search-box button');
+            
+            searchButton.addEventListener('click', function() {
+                if (searchBox.value.trim() !== '') {
+                    alert('"' + searchBox.value + '" অনুসন্ধান করা হচ্ছে...');
+                }
+            });
+            
+            searchBox.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && searchBox.value.trim() !== '') {
+                    alert('"' + searchBox.value + '" অনুসন্ধান করা হচ্ছে...');
+                }
+            });
+            
+            // Security animation
+            const securityFeatures = document.querySelectorAll('.security-feature');
+            securityFeatures.forEach(feature => {
+                feature.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                feature.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
